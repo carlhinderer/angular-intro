@@ -1,0 +1,68 @@
+-----------------------------------------------------------
+CHAPTER 1 - INTRO
+-----------------------------------------------------------
+
+- Angular Fundamental Features
+
+    1. Powerful templating syntax
+    2. Modularity and separation of concerns
+    3. Data binding, which enables data-driven programming
+    4. Testability and awesome testing support
+    5. Routing and navigation
+    6. A whole bunch of other advanced features if you need them
+
+
+
+- Chapters
+
+    1. Introducing Angular
+    2. Hello Angular
+    3. Useful Built-in Angular Directives
+    4. Understanding and Testing Angular Components
+    5. Testing Angular Components
+
+    6. Working with Template-Driven Forms
+    7. Working with Reactive Forms
+
+    8. Angular Services
+    9. Making HTTP Calls in Angular
+    10. Unit Testing Services
+
+    11. Routing in Angular
+
+    12. Productionizing Angular
+
+
+
+- Installing Node
+
+    # First install nvm
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
+    # Verify the nvm install
+    $ nvm list
+
+
+    # Install the latest version of node
+    $ nvm install node
+
+    # Use the latest version
+    $ nvm use default
+
+    # Verify versions
+    $ node --version
+    $ npm --v
+
+
+
+- Installing Dependencies
+
+    # Install Typescript globally
+    $ npm install -g typescript
+
+
+    # Install Angular globally
+    $ npm install -g @angular/cli
+
+    # Verify Angular installation
+    $ ng --version

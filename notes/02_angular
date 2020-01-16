@@ -183,9 +183,48 @@ CHAPTER 2 - HELLO ANGULAR
 
 - Creating a Component
 
-    - Steps in Creating New Components
-    - Using Our New Component
-    - Understanding Data Binding
-    - Understanding Property Binding
-    - Understanding Event Binding
-    - Using Models for Cleaner Code
+    - First, we will create a stock widget, which displays the name of the stock, 
+        its stock code, the current price, and whether it has changed for the 
+        positive or negative.
+
+        # Create new component 'stock-item' in folder 'stock'
+        $ ng generate component stock/stock-item
+
+
+    - The command will generate all the relevant files for a new component, including:
+
+        stock-item.component.ts
+          The component definition
+
+        stock-item.component.html
+          The corresponding template definition
+
+        stock-item.component.css        
+          The styles for the component
+
+        stock-item.component.spec.ts
+          The skeleton unit tests for the component
+
+
+    - Here is the updated AppModule with our new component added:
+
+        # src/app/app.module.ts
+
+        ...
+        import { AppComponent } from './app.component';
+        import { StockItemComponent } from './stock/stock-item/stock-item.component';
+
+        @NgModule({
+          declarations: [
+            AppComponent,
+            StockItemComponent
+          ],
+          ...
+
+
+
+- Using Our New Component
+- Understanding Data Binding
+- Understanding Property Binding
+- Understanding Event Binding
+- Using Models for Cleaner Code

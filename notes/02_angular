@@ -56,9 +56,73 @@ CHAPTER 2 - HELLO ANGULAR
 
 - Basics of an Angular Application
 
+    - Here is the structure of the new project:
+
+        stock-market
+        +----e2e                                # End-to-end tests
+        +----src
+             +----app
+                  +----app.component.css
+                  +----app.component.html
+                  +----app.component.spec.ts
+                  +----app.component.ts         # Root component
+                  +----app.module.ts            # Main module
+             +----assets
+             +----environments
+             +----index.html                    # Root html
+             +----main.ts                       # Entry point
+         +----.angular-cli.json                 # Angular CLI config
+
+
+
     - Root HTML - index.html
+
+        - Notice that the root component is sparse:
+
+            # src/index.html
+
+            <!doctype html>
+            <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <title>StockMarket</title>
+              <base href="/">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <link rel="icon" type="image/x-icon" href="favicon.ico">
+            </head>
+            <body>
+              <app-root></app-root>          # Root component
+            </body>
+            </html>
+
+
+
     - The Entry Point - main.ts
-    - Main Module - app.module.ts
+
+        - While the index.html file is responsible for deciding which files are 
+            to be loaded, the main.ts file  identifies which Angular module is to 
+            be loaded when the application starts.
+
+          # src/main.ts
+
+          import { enableProdMode } from '@angular/core';
+          import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+          
+          import { AppModule } from './app/app.module';
+          import { environment } from './environments/environment';
+          
+          if (environment.production) {
+            enableProdMode();
+          }
+          
+          platformBrowserDynamic().bootstrapModule(AppModule)   # Bootstrap the main AppModule
+            .catch(err => console.log(err));
+
+
+
+    - MainModule - app.module.ts
+
+ 
 
 
 - Creating a Component

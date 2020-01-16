@@ -227,7 +227,7 @@ CHAPTER 2 - HELLO ANGULAR
 
     - Here is the generated stock-item.component.ts file:
 
-        # src/app/stock/stock-item.component.ts
+        # src/app/stock/stock-item/stock-item.component.ts
 
         import { Component, OnInit } from '@angular/core';
         
@@ -258,6 +258,47 @@ CHAPTER 2 - HELLO ANGULAR
 
 
 - Understanding Data Binding
+
+    - Let's start by adding some default values for a stock item:
+
+       # src/app/stock/stock-item/stock-item.component.ts
+
+       import { Component, OnInit } from '@angular/core';
+
+       @Component({
+         selector: 'app-stock-item',
+         templateUrl: './stock-item.component.html',
+         styleUrls: ['./stock-item.component.css']
+       })
+       export class StockItemComponent implements OnInit {  1
+       
+         public name: string;                        2
+         public code: string;
+         public price: number;
+         public previousPrice: number;
+       
+         constructor() { }
+       
+         ngOnInit() {                                3
+           this.name = 'Test Stock Company';         4
+           this.code = 'TSC';
+           this.price = 85;
+           this.previousPrice = 80;
+         }
+       }
+
+    
+       1 Implement OnInit interface from Angular, which gives us a hook to when 
+           the component is initialized
+
+       2 Definition of the various fields we will want to access from the HTML
+
+       3 OnInit function that is triggered when a component is initialized
+
+       4 Initializing the values for each of the fields
+
+
+
 - Understanding Property Binding
 - Understanding Event Binding
 - Using Models for Cleaner Code

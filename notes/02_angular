@@ -1,0 +1,31 @@
+-----------------------------------------------------------
+CHAPTER 2 - HELLO ANGULAR
+-----------------------------------------------------------
+
+- Starting a New Project
+
+    # Start new project with default options
+    $ ng new stock-market
+
+
+
+- Understanding the Angular CLI
+
+    - Running the Application
+
+
+- Basics of an Angular Application
+
+    - Root HTML - index.html
+    - The Entry Point - main.ts
+    - Main Module - app.module.ts
+
+
+- Creating a Component
+
+    - Steps in Creating New Components
+    - Using Our New Component
+    - Understanding Data Binding
+    - Understanding Property Binding
+    - Understanding Event Binding
+    - Using Models for Cleaner Code

@@ -122,7 +122,63 @@ CHAPTER 2 - HELLO ANGULAR
 
     - MainModule - app.module.ts
 
- 
+        - This is where your application-specific source code starts from. The 
+            application module file can be thought of as the core configuration 
+            of your application, from loading all the relevant and necessary 
+            dependencies, declaring which components will be used within your 
+            application, to marking which is the main entry point component of 
+            your application.
+
+
+        # src/app/app.module.ts
+
+        import { BrowserModule } from '@angular/platform-browser';
+        import { NgModule } from '@angular/core';
+        import { AppComponent } from './app.component';
+        
+        @NgModule({                            1
+          declarations: [
+            AppComponent                       2
+          ],
+          imports: [                           3
+            BrowserModule
+          ],
+          providers: [],
+          bootstrap: [AppComponent]            4
+        })
+        export class AppModule { }
+
+
+        1 NgModule TypeScript annotation to mark this class definition as an 
+            Angular module
+
+        2 Declarations marking out which components and directives can be used 
+            within the application
+
+        3 Importing other modules that provide functionality needed in the application
+
+        4 The entry point component for starting the application
+
+
+
+    - Root Component - AppComponent
+
+        - Here is the code for our only component, the 'AppComponent':
+
+            # src/app/app.component.ts
+
+            import { Component } from '@angular/core';
+
+            @Component({
+              selector: 'app-root',
+              templateUrl: './app.component.html',
+              styleUrls: ['./app.component.css']
+            })
+
+            export class AppComponent {
+              title = 'app';
+            }
+
 
 
 - Creating a Component

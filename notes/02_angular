@@ -299,6 +299,24 @@ CHAPTER 2 - HELLO ANGULAR
 
 
 
+    - Now, we'll update our template:
+
+        # app/stock/stock-item/stock-item.component.html
+
+        <div class="stock-container">
+          <div class="name"><h3>{{name}}</h3> - <h4>({{code}})</h4></div>
+          <div class="price">$ {{price}}</div>
+        </div>
+
+
+    - And, we'll update our css:
+
+        # app/stock/stock-item/stock-item.component.css
+
+        
+
+
+
 - Understanding Property Binding
 - Understanding Event Binding
 - Using Models for Cleaner Code

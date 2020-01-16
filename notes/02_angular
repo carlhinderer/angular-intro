@@ -224,6 +224,39 @@ CHAPTER 2 - HELLO ANGULAR
 
 
 - Using Our New Component
+
+    - Here is the generated stock-item.component.ts file:
+
+        # src/app/stock/stock-item.component.ts
+
+        import { Component, OnInit } from '@angular/core';
+        
+        @Component({
+          selector: 'app-stock-item',
+          templateUrl: './stock-item.component.html',
+          styleUrls: ['./stock-item.component.css']
+        })
+
+        export class StockItemComponent implements OnInit {
+          constructor() { }
+          ngOnInit() { }
+        }
+
+
+    - To use this component in our application, we can simply create an element that 
+        matches the selector defined anywhere inside our main app component. 
+
+        # src/app/app.component.html
+
+        <div style="text-align:center">
+          <h1>
+            Welcome to {{ title }}!
+          </h1>
+          <app-stock-item></app-stock-item>
+        </div>
+
+
+
 - Understanding Data Binding
 - Understanding Property Binding
 - Understanding Event Binding
